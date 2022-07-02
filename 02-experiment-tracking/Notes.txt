@@ -1,0 +1,69 @@
+#### Experimental Tracking 
+
+To configure the MLflow in our projects...
+1. Prepare the local envir...
+2. Install the Mlflow client and configure the backend.
+3. Add the MLflow to the existing notebook
+
+# Ml flow 
+''An open-source Ml platform for ML lifecycle''
+It is a simple python package that can be installed using pip and conda.
+It contains four modules, 
+Tracking 
+Models
+Model Registry
+projects
+
+# How it is working?
+The process of keeping track of all relevant information from an Ml experiment, which 
+includes...,
+Source Code
+Environment
+Data
+Model (different architecture)
+Hyperparameters
+Metrics
+artifacts
+
+# How it is useful?
+
+* Reproducibility
+* Organization
+* Optimization
+
+# Model Environments
+MLflow also provides the Python environment on which the model was trained. This will help 
+the deployment of the model in the production stage to replicate the same environment 
+as the training stage.
+
+MLflow automatically provides 3 types of environment files:
+conda.yaml for Conda
+requirements.txt for pip
+python_env.yaml for virtualenv
+
+### Model Management
+
+# Why not spreadsheets?
+
+* Error-prone
+* No standard format (versioning of model)
+* visibility and collaboration
+
+1-method
+The most basic version of saving a model 
+" mlflow.log_artifact("models/preprocessor.bin", artifact_path="preprocessor") "
+
+
+2-method
+log xgboost model to mlflow
+mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
+
+we can also save the dict-vectorizers, scaler, and transformers as a pickle and also
+in MLflow.
+
+# prediction made in two ways
+1. Spark DataFrame
+2. Pandas DataFrame ..... Both are clearly shown on the MLflow page.
+
+# Load model is done in different ways.
+retrieve the model from a pickle file.
