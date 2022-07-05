@@ -67,3 +67,19 @@ in MLflow.
 
 # Load model is done in different ways.
 retrieve the model from a pickle file.
+
+
+### Model Registry
+A model registry is a repository used to store and version trained machine learning (ML) models. Model registries greatly simplify the task of tracking models as they move through the ML lifecycle, from training to production deployments and ultimately retirement.
+
+Exspecially in Mlflow model registry is centralized model repository and Ui and set of Api, that enables you to manage the full life cycle of MLflow Model.
+
+
+Model registry is not performing the deployment of the model, but it is merely to register the stages of model.
+
+As Data Scientists, our job is not to deploy the model, but to decide which model will be used for production.
+
+A few common considerations to take account (apart from performance metrics - RMSE):
+
+Duration
+Size of the model
